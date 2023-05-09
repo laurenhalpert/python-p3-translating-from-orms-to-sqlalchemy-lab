@@ -1,9 +1,9 @@
 from models import Dog
-from sqlalchemy import create_engine
 
-def create_table(Base, engine):
-    engine = create_engine('sqlite:///dogs.db')
-    Base.metadata.create_all(engine)
+
+def create_table(base, engine):
+    
+    base.metadata.create_all(engine)
     
 
 def save(session, dog):
